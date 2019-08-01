@@ -51,16 +51,24 @@ Nota: Cuando se hace una fusion, pueden haber dos tipos de resultados:
 se ejecuta el comando git clone linkProyecto (Tener en cuenta que se debe estar parado en la rama master y para ello, solo se debe iniciar el git con el comando git init)
 
 13. Para subir un proyecto de nuestro repositorio local a nuestro repositorio remoto,debemos estar parados en el directorio donde este nuestro proyecto, 
-luego debemos ejecutar el siguiente comando:
-(Tener en cuenta que se debe estar parado en la rama master del proyecto y para ello, solo se debe parar en el directorio e iniciar el git con el comando git init)
- 1. primero enlazmos ambos repositorios 
-   git remote add linkRepositorioRemoto
+	luego debemos ejecutar el siguiente comando:
+	(Tener en cuenta que se debe estar parado en la rama master del proyecto y para ello, solo se debe parar en el directorio e iniciar el git con el comando git init)
+	1. primero enlazmos ambos repositorios 
+		git remote add linkRepositorioRemoto
  
- 2.Despues se puede validar si quedaron enlazados con el comando git remote -v, y se vera que arroja el mismo linkRepositorioRemoto que se puso en el comando anterior
+	2.Despues se puede validar si quedaron enlazados con el comando git remote -v, y se vera que arroja el mismo linkRepositorioRemoto que se puso en el comando anterior
  
-14. Si se elimina el repositorio remoto y se crea uno nuevo; y aparte se desea que nuestro repositorio local apunte al nuevo repositorio remoto 
-(En pocas palabras, para cambiar el apuntador del repositorio local al remoto)
+13.1. Si se elimina el repositorio remoto y se crea uno nuevo; y aparte se desea que nuestro repositorio local apunte al nuevo repositorio remoto 
+	 (En pocas palabras, para cambiar el apuntador del repositorio local al remoto)
 
-1. Eliminar el enlace de ambos repositorios: ejecutar git remote remove origin
-2. Validar que ya no esten enlazados con el comando: git remote -v (no deberia arrojar ningun resultado debido a que ya no estan enlazados)
-3. Enlazar con el nuevo repositorio remoto con el siguiente comando: git remote add origin linkRepositorioRemoto
+	1. Eliminar el enlace de ambos repositorios: ejecutar git remote remove origin
+	2. Validar que ya no esten enlazados con el comando: git remote -v (no deberia arrojar ningun resultado debido a que ya no estan enlazados)
+	3. Enlazar con el nuevo repositorio remoto con el siguiente comando: git remote add origin linkRepositorioRemoto
+
+13.2. Finalmente despues de haber enlazado ambos repositorios, tanto el local como el remoto, se ejecuta:
+	 git push origin nombreRama, cuando se ejecuta este comando, automaticamente git pide el usuario de github, se ingresa usuario y contraseña y listo
+	 
+	 ejemplo: git push origin master
+	 
+-Dentro de github.com se puede crear issues en el repositorio para poder indicar que hay pendiente para hacer al proyecto. De igual forma se puede crear un Milestones 
+que es como un paquete de issues
