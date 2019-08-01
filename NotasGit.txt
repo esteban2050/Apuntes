@@ -1,0 +1,66 @@
+GIT:
+1. para empezar a trabajar con el ejemplo, debemos pararnos en nuestra area de trabajo donde esten los archivos o el directorio donde se va a trabajar.
+ejemplo:
+
+cd C:/Users/esteban/Documents/PracticaGIt
+
+2. Despues de que estas parado en el directorio, se ejecuta el comando: git init  
+Con esto, le indicamos a git que desde esta parte, empezara a  monitorias todos nuestros cambios, este comando solo se va ejecutar una sola vez y 
+se debe hacer al ejecutar nuestro proyecto. 
+
+3. Se tiene el comando git status, que nos indica el estado de nuestro proyecto; con este comando se puede validar que archivos aun no se han agregado  
+
+4. Con el comando git add, se indica que los archivos especificados, van a ser agregados para poder hacer el commit y subirlos 
+  - con el comando git add -A, es para agregar todos los archivos que hayan para agregar. Es como un agregar ALL
+
+5. Para subir los cambios, se usa: git commit  -m "Mensaje", y entre comillas estan los comentarios de los cambios que se realizaron
+
+6. Para ver el historial de commits que se han hecho, se usa el comando git log
+
+7.para viajar a otro commit  o para cambiar de rama, se hace con el comando git chekout
+para viajar a otro commit, se hace con el codigo del commit 
+ejemplo: git checkout ASASSA7DA8D5F5AASAS7797A97S   y para devolverse al ultimo commit despues de que hayas revisado lo necesario, se hace con el comando:
+
+git checkout master para volver al ultimo commit
+
+Para cambiar de rama a otra que aun no existe, se puede correr el siguiente comando; el cual tiene como accion : cambiar + crear la rama que no existe
+git checkout -b nombreRama
+
+8. Para matar los commit git reset; estan tres tipos pero los mas ultilizados son los dos siguientes
+1. git reset --soft ASASSA7DA8D5F5AASAS7797A97S: borra el commit especifico pero no toca el codigo, el codigo lo deja intacto
+2. git reset --hard ASASSA7DA8D5F5AASAS7797A97S: borra todo el commit y el codigo tambien lo elimina, revirtiendo todos los cambios
+
+9. Para observar las ramas o para crear una rama, se ejecuta el comando git branch 
+	1.Para observar: git branch
+	2.Para crear: git branch NombreRama
+	
+10. Para poder juntar/fusionar dos ramas, primero se debe parar en la rama principal que va absorver a la otra y se ejecuta el comando git merge NombreRama
+ejemplo:
+
+git checkout rama1
+git merge rama2
+
+y asi todos los cambios que se hayan hecho en la rama 2, van a quedar en la rama 1, haciendo una fusion.
+Nota: Cuando se hace una fusion, pueden haber dos tipos de resultados: 
+1.Fast-forward
+2.Manual Merge
+
+11. Para eliminar una rama, se debe ejecutar el siguiente comando git branch -D nombreRama
+
+12. Para bajar un proyecto que esta la nube, se hace un proceso de clonar el proyecto; para ello se debe dirigir desde la consola, en el directorio donde se desea clonar, y luego
+se ejecuta el comando git clone linkProyecto (Tener en cuenta que se debe estar parado en la rama master y para ello, solo se debe iniciar el git con el comando git init)
+
+13. Para subir un proyecto de nuestro repositorio local a nuestro repositorio remoto,debemos estar parados en el directorio donde este nuestro proyecto, 
+luego debemos ejecutar el siguiente comando:
+(Tener en cuenta que se debe estar parado en la rama master del proyecto y para ello, solo se debe parar en el directorio e iniciar el git con el comando git init)
+ 1. primero enlazmos ambos repositorios 
+   git remote add linkRepositorioRemoto
+ 
+ 2.Despues se puede validar si quedaron enlazados con el comando git remote -v, y se vera que arroja el mismo linkRepositorioRemoto que se puso en el comando anterior
+ 
+14. Si se elimina el repositorio remoto y se crea uno nuevo; y aparte se desea que nuestro repositorio local apunte al nuevo repositorio remoto 
+(En pocas palabras, para cambiar el apuntador del repositorio local al remoto)
+
+1. Eliminar el enlace de ambos repositorios: ejecutar git remote remove origin
+2. Validar que ya no esten enlazados con el comando: git remote -v (no deberia arrojar ningun resultado debido a que ya no estan enlazados)
+3. Enlazar con el nuevo repositorio remoto con el siguiente comando: git remote add origin linkRepositorioRemoto
