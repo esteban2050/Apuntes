@@ -1,4 +1,4 @@
-GIT:
+﻿GIT:
 1. para empezar a trabajar con el ejemplo, debemos pararnos en nuestra area de trabajo donde esten los archivos o el directorio donde se va a trabajar.
 ejemplo:
 
@@ -48,7 +48,7 @@ Nota: Cuando se hace una fusion, pueden haber dos tipos de resultados:
 11. Para eliminar una rama, se debe ejecutar el siguiente comando git branch -D nombreRama
 
 12. Para bajar un proyecto que esta la nube, se hace un proceso de clonar el proyecto; para ello se debe dirigir desde la consola, en el directorio donde se desea clonar, y luego
-se ejecuta el comando git clone linkProyecto (Tener en cuenta que se debe estar parado en la rama master y para ello, solo se debe iniciar el git con el comando git init)
+se ejecuta el comando git clone linkProyecto
 
 13. Para subir un proyecto de nuestro repositorio local a nuestro repositorio remoto,debemos estar parados en el directorio donde este nuestro proyecto, 
 	luego debemos ejecutar el siguiente comando:
