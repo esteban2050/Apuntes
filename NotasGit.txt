@@ -72,3 +72,44 @@ se ejecuta el comando git clone linkProyecto
 	 
 -Dentro de github.com se puede crear issues en el repositorio para poder indicar que hay pendiente para hacer al proyecto. De igual forma se puede crear un Milestones 
 que es como un paquete de issues
+
+-Tags o etiquetas son puntos especificos en la historia de nuestro proyecto y se usa para marcar alguna version del mismo.
+por ejemplo: siver para decir a un commit, "tu eres la version 1.0, 2.0"
+
+14. Para modificar un commit; dado el caso que hayan dos commit con el mismo comentario, se hace con el siguiente comando 
+
+	git commit --amend -m "mensaje"
+
+y luego se debe ejecutar el siguiente comando para subir los cambios al repositorio remoto de forma forzada, debido a que 
+el git no detecta cambios por que los commit no tienen cambios en el codigo, solo en el comentario, por lo tanto toca 
+forzar el push con el siguiente comando
+
+	git push origin master -f
+
+15. Para crear un tag, se ejecuta el sigueinte comando: 
+Diferentes tipos de tags:
+1.Tags anotadas(son almacenadas como objetos completos dentro de git y contiene mas informacion):
+	git tag -a v1.0 -m "Mensaje"
+ejemplo:
+	git tag -a vX.X -m "version X.X de nuestro proyecto"
+
+2.Tags ligeras(swon otra forma de crear tags, mas simples y con poca informacion)  
+	git tag v1.0
+
+Se debe tener en cuenta que cuando se agrega una etiqueta, se agrega para el ultimo commit; si se desea agregar el tag a un commit anterior, 
+se debe tener copiado el codigo SHA (codigo alfanumerico del commit que se puede obtener de los resultados del git log).
+
+	git tag -a vX.X -m "version X.X de nuestro proyecto" CODIGO_SHA
+
+Para poder subir el tag al repositorio remoto, se debe hacer el push junto con la Version del tag que se creo; ejemplo:
+
+	git push origin VX.X
+
+Si se tienen muchos tags creados y se desea subir todos a la vez para no tener que subir uno por uno, se debe ejecutar el siguiente comando
+ 
+git push origin --tags
+
+16. Si se esta trabajando en grupo y se desea bajar los cambios del repositorio que haya hecho algun otro compañero 
+de trabajo, se debe ejecutar la siguiente sentencia 
+
+	git fetch origin
