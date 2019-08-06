@@ -42,8 +42,9 @@ git merge rama2
 
 y asi todos los cambios que se hayan hecho en la rama 2, van a quedar en la rama 1, haciendo una fusion.
 Nota: Cuando se hace una fusion, pueden haber dos tipos de resultados: 
-1.Fast-forward
-2.Manual Merge
+1.Fast-forward: Cuando se hacen cambios de lineas de codigos por varias personas pero siempre lineas diferentes y no 
+presenta conflictos
+2.Manual Merge: Cuando se presentan conflictos 
 
 11. Para eliminar una rama, se debe ejecutar el siguiente comando git branch -D nombreRama
 
@@ -109,7 +110,7 @@ Si se tienen muchos tags creados y se desea subir todos a la vez para no tener q
  
 git push origin --tags
 
-16. Si se esta trabajando en grupo y se desea bajar los cambios del repositorio que haya hecho algun otro compañero 
+16. Si se esta trabajando en grupo y se desea bajar/descargar los cambios del repositorio que haya hecho algun otro compañero 
 de trabajo, se debe ejecutar la siguiente sentencia 
 
 	git fetch origin
