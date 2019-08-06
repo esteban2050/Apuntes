@@ -55,7 +55,7 @@ se ejecuta el comando git clone linkProyecto
 	luego debemos ejecutar el siguiente comando:
 	(Tener en cuenta que se debe estar parado en la rama master del proyecto y para ello, solo se debe parar en el directorio e iniciar el git con el comando git init)
 	1. primero enlazmos ambos repositorios 
-		git remote add linkRepositorioRemoto
+		git remote add origin linkRepositorioRemoto
  
 	2.Despues se puede validar si quedaron enlazados con el comando git remote -v, y se vera que arroja el mismo linkRepositorioRemoto que se puso en el comando anterior
  
